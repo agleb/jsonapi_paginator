@@ -1,4 +1,4 @@
-# JsonapiPaginator
+# JSON API paginator
 
 Renders links section of the JSONAPI.ORG API's response as a map.
 
@@ -37,4 +37,8 @@ def deps do
   ]
 end
 ```
+
+## License
+
+MIT
 
