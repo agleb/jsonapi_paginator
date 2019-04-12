@@ -1,5 +1,7 @@
 # JSON API paginator
 
+[![Hex.pm](https://img.shields.io/hexpm/v/jsonapi_paginator.svg)](https://hex.pm/packages/jsonapi_paginator)
+
 Renders links section of the JSONAPI.ORG API's response as a map.
 
 ```elixir
