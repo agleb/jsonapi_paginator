@@ -14,11 +14,11 @@ defmodule JsonapiPaginatorTest do
       })
 
     expected = %{
-      first: "http://localhost/api/v1/get_page?page[number]=1&page[size]=10",
-      last: "http://localhost/api/v1/get_page?page[number]=10&page[size]=10",
-      next: "http://localhost/api/v1/get_page?page[number]=3&page[size]=10",
-      prev: "http://localhost/api/v1/get_page?page[number]=1&page[size]=10",
-      self: "http://localhost/api/v1/get_page?page[number]=2&page[size]=10"
+      first: "http://localhost/api/v1/get_page?number=1&size=10",
+      last: "http://localhost/api/v1/get_page?number=10&size=10",
+      next: "http://localhost/api/v1/get_page?number=3&size=10",
+      prev: "http://localhost/api/v1/get_page?number=1&size=10",
+      self: "http://localhost/api/v1/get_page?number=2&size=10"
     }
 
     assert result == expected
@@ -35,11 +35,10 @@ defmodule JsonapiPaginatorTest do
       })
 
     expected = %{
-      first: "http://localhost/api/v1/get_page?page[number]=1&page[size]=10",
-      last: "http://localhost/api/v1/get_page?page[number]=10&page[size]=10",
-      next: nil,
-      prev: "http://localhost/api/v1/get_page?page[number]=9&page[size]=10",
-      self: "http://localhost/api/v1/get_page?page[number]=10&page[size]=10"
+      first: "http://localhost/api/v1/get_page?number=1&size=10",
+      last: "http://localhost/api/v1/get_page?number=10&size=10",
+      prev: "http://localhost/api/v1/get_page?number=9&size=10",
+      self: "http://localhost/api/v1/get_page?number=10&size=10"
     }
 
     assert result == expected
@@ -56,11 +55,10 @@ defmodule JsonapiPaginatorTest do
       })
 
     expected = %{
-      first: "http://localhost/api/v1/get_page?page[number]=1&page[size]=10",
-      last: "http://localhost/api/v1/get_page?page[number]=10&page[size]=10",
-      next: "http://localhost/api/v1/get_page?page[number]=2&page[size]=10",
-      prev: nil,
-      self: "http://localhost/api/v1/get_page?page[number]=1&page[size]=10"
+      first: "http://localhost/api/v1/get_page?number=1&size=10",
+      last: "http://localhost/api/v1/get_page?number=10&size=10",
+      next: "http://localhost/api/v1/get_page?number=2&size=10",
+      self: "http://localhost/api/v1/get_page?number=1&size=10"
     }
 
     assert result == expected
